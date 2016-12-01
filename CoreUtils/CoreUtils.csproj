@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LazyValue\LazyValue.cs" />
-    <Compile Include="LazyValue\StaticLazyValue.cs" />
+    <Compile Include="LazyValue\LazyValue.Create.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThrowHelpers\ReturnParameter.cs" />
     <Compile Include="ThrowHelpers\Throw.cs" />
