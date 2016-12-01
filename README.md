@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/jsx8fk6bgg1h1w08/branch/master?svg=true)](https://ci.appveyor.com/project/Meeji/coreutils/branch/master)
+
 # CoreUtils
 Core library re-used by our other code
 
