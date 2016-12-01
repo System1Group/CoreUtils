@@ -1,4 +1,4 @@
-﻿namespace BJ.Core.Tests
+﻿namespace CoreUtils.Tests
 {
     using System;
 

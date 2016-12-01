@@ -1,6 +1,8 @@
-﻿namespace BJ.Core.Tests
+﻿namespace CoreUtils.Tests
 {
     using System;
+
+    using CoreUtils;
 
     using NUnit.Framework;
 
@@ -24,14 +26,14 @@
         public void ReturnParameter_OrThrowIfNullEmptyOrWhitespace_Empty()
         {
             var x = Assert.Throws<ArgumentException>(() => ReturnParameter.OrThrowIfNullEmptyOrWhitespace(string.Empty, "testString"));
-            Assert.That(x.Message, Is.StringStarting("Value should not be empty"));
+            Assert.That(x.Message, Does.StartWith("Value should not be empty"));
         }
 
         [Test]
         public void ReturnParameter_OrThrowIfNullEmptyOrWhitespace_Whitespace()
         {
             var x = Assert.Throws<ArgumentException>(() => ReturnParameter.OrThrowIfNullEmptyOrWhitespace(" ", "testString"));
-            Assert.That(x.Message, Is.StringStarting("Value should not be whitespace"));
+            Assert.That(x.Message, Does.StartWith("Value should not be whitespace"));
         }
     }
 }

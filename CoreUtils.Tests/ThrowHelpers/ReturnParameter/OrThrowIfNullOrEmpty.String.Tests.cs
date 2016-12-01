@@ -1,6 +1,8 @@
-﻿namespace BJ.Core.Tests
+﻿namespace CoreUtils.Tests
 {
     using System;
+
+    using CoreUtils;
 
     using NUnit.Framework;
 
@@ -24,7 +26,7 @@
         public void ReturnParameter_OrThrowIfNullOrEmpty_Empty()
         {
             var x = Assert.Throws<ArgumentException>(() => ReturnParameter.OrThrowIfNullOrEmpty(string.Empty, "testString"));
-            Assert.That(x.Message, Is.StringStarting("Value should not be empty"));
+            Assert.That(x.Message, Does.StartWith("Value should not be empty"));
         }
     }
 }

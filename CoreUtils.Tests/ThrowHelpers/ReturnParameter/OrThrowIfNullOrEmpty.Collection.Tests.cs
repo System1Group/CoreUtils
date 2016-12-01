@@ -3,6 +3,8 @@
     using System;
     using System.Collections.Generic;
 
+    using CoreUtils;
+
     using NUnit.Framework;
 
     [TestFixture]
@@ -26,7 +28,7 @@
         public void ReturnParameter_OrThrowIfNullOrEmpty_Collection_Empty()
         {
             var x = Assert.Throws<ArgumentException>(() => ReturnParameter.OrThrowIfNullOrEmpty(new List<int>(), "list"));
-            Assert.That(x.Message, Is.StringStarting("Collection should not be empty"));
+            Assert.That(x.Message, Does.StartWith("Collection should not be empty"));
         }
     }
 }
