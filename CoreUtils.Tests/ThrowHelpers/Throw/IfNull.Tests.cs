@@ -1,7 +1,8 @@
-﻿namespace BJ.Core.Tests
+﻿namespace CoreUtils.Tests
 {
     using System;
-    using BJ.Core;
+
+    using CoreUtils;
 
     using NUnit.Framework;
 

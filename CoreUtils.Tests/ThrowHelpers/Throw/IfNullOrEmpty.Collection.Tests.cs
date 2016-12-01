@@ -1,7 +1,9 @@
-﻿namespace BJ.Core.Tests
+﻿namespace CoreUtils.Tests
 {
     using System;
     using System.Collections.Generic;
+
+    using CoreUtils;
 
     using NUnit.Framework;
 
@@ -24,7 +26,7 @@
         public void Throw_IfNullOrEmpty_ICollection_Empty()
         {
             var x = Assert.Throws<ArgumentException>(() => Throw.IfNullOrEmpty(new List<int>(), "list"));
-            Assert.That(x.Message, Is.StringStarting("Collection should not be empty"));
+            Assert.That(x.Message, Does.StartWith("Collection should not be empty"));
         }
     }
 }
