@@ -36,7 +36,7 @@ var str3 = ReturnParameter.OrThrowIfNull(str, nameof(str)); // Throws ArgumentNu
 //  - ReturnParameter.OrThrowIfEmptyOrWhitespace
 ```
 
-### LazyValue
+## LazyValue
 
 Creates a lazy value like the built in ```Lazy<T>``` but with less overhead and without thread safety
 
