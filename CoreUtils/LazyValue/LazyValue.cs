@@ -20,7 +20,7 @@
                 if (this.factory != null)
                 {
                     this.value = this.factory();
-                    this.factory = null; // Zero factory since we don't need it anymore and it might be holding memory                    
+                    this.factory = null; // Zero factory since we don't need it anymore and it might be holding memory
                 }
 
                 return this.value;
