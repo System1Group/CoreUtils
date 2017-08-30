@@ -1,4 +1,4 @@
-﻿namespace CoreUtils
+﻿namespace System1Group.Lib.CoreUtils
 {
     using System;
 

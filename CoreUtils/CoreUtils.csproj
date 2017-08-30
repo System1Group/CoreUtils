@@ -8,8 +8,8 @@
     <ProjectGuid>{5837F2FD-C318-47EF-983B-D32FFBD8B35A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CoreUtils</RootNamespace>
-    <AssemblyName>CoreUtils</AssemblyName>
+    <RootNamespace>System1Group.Lib.CoreUtils</RootNamespace>
+    <AssemblyName>System1Group.Lib.CoreUtils</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
