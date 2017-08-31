@@ -9,9 +9,8 @@ assembly_info:
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
-nuget:
-  nuget sources add -name CSharpRuleSet -source https://ci.appveyor.com/nuget/csharpruleset-rxwtqx7d05sl
 before_build:
+ nuget sources add -name CSharpRuleSet -source https://ci.appveyor.com/nuget/csharpruleset-rxwtqx7d05sl
 - cmd: nuget restore
 build:
   verbosity: minimal
