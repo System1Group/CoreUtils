@@ -1,4 +1,4 @@
-﻿namespace CoreUtils
+﻿namespace System1Group.Lib.CoreUtils
 {
     using System;
     using System.Collections.Generic;
@@ -50,19 +50,24 @@
             IfWhitespace(value, paramName);
         }
 
+        public static void IfWhitespace(string value, string paramName)
+        {
+            if (value == null)
+            {
+                return;
+            }
+
+            if (string.CompareOrdinal(value.Trim(), string.Empty) == 0)
+            {
+                throw new ArgumentException("Value should not be whitespace", paramName);
+            }
+        }
+
         private static void IfEmpty(string value, string paramName)
         {
             if (string.CompareOrdinal(value, string.Empty) == 0)
             {
                 throw new ArgumentException("Value should not be empty", paramName);
-            }
-        }
-
-        private static void IfWhitespace(string value, string paramName)
-        {
-            if (string.CompareOrdinal(value.Trim(), string.Empty) == 0)
-            {
-                throw new ArgumentException("Value should not be whitespace", paramName);
             }
         }
     }

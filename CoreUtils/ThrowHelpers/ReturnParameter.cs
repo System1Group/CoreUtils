@@ -1,4 +1,4 @@
-namespace CoreUtils
+namespace System1Group.Lib.CoreUtils
 {
     using System.Collections.Generic;
 
@@ -31,6 +31,12 @@ namespace CoreUtils
         public static string OrThrowIfEmptyOrWhitespace(string value, string paramName)
         {
             Throw.IfEmptyOrWhitespace(value, paramName);
+            return value;
+        }
+
+        public static string OrThrowIfWhitespace(string value, string paramName)
+        {
+            Throw.IfWhitespace(value, paramName);
             return value;
         }
     }

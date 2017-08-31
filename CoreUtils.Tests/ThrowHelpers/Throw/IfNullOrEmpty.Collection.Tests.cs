@@ -1,10 +1,7 @@
-﻿namespace CoreUtils.Tests
+﻿namespace System1Group.Lib.CoreUtils.Tests
 {
     using System;
     using System.Collections.Generic;
-
-    using CoreUtils;
-
     using NUnit.Framework;
 
     [TestFixture]
