@@ -15,13 +15,13 @@
         }
 
         [Test]
-        public void ReturnParameter_OrThrowIfWhiteSpace_Null()
+        public void ReturnParameter_OrThrowIfWhiteSpace_Ok_Null()
         {
             Assert.DoesNotThrow(() => ReturnParameter.OrThrowIfWhitespace((string)null, "test"));
         }
 
         [Test]
-        public void ReturnParameter_OrThrowIfNull_Null()
+        public void ReturnParameter_OrThrowIfWhiteSpace_WhiteSpace()
         {
             Assert.Throws<ArgumentException>(() => ReturnParameter.OrThrowIfWhitespace(" ", "test"));
         }

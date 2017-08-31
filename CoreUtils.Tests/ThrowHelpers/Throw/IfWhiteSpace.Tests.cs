@@ -13,13 +13,13 @@
         }
 
         [Test]
-        public void Throw_IfNull_Null()
+        public void Throw_IfWhitespace_Ok_Null()
         {
             Assert.DoesNotThrow(() => Throw.IfWhitespace(null, "TestParam"));
         }
 
         [Test]
-        public void Throw_IfNull_Ok_WhiteSpace()
+        public void Throw_IfWhitespace_WhiteSpace()
         {
             Assert.Throws<ArgumentException>(() => Throw.IfWhitespace(" ", "testParam"));
         }
