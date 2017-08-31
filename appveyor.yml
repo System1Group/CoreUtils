@@ -10,11 +10,10 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 nuget:
-  project_feed: true
+  nuget sources add -name CSharpRuleSet -source https://ci.appveyor.com/nuget/csharpruleset-rxwtqx7d05sl
 before_build:
 - cmd: nuget restore
 build:
-  nuget sources add -name CSharpRuleSet -source https://ci.appveyor.com/nuget/system1group
   verbosity: minimal
 after_build:
 - ps: nuget pack CoreUtils\CoreUtils.csproj -Version $env:appveyor_build_version -IncludeReferencedProjects
