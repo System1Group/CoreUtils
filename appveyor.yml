@@ -17,14 +17,9 @@ before_build:
 - cmd: dotnet restore
 build:
   verbosity: minimal
-#test:
-#  assemblies:
-#    only:
-#    - '**\bin\release\**\*Tests.dll'
 test_script:
-- ps: >-
-    dotnet test CoreUtils.Tests\System1Group.Lib.CoreUtils.Tests.csproj
+- ps: dotnet test CoreUtils.Tests\System1Group.Lib.CoreUtils.Tests.csproj
 after_build:
 - ps: dotnet pack CoreUtils\System1Group.Lib.CoreUtils.csproj
 artifacts:
-- path: '*.nupkg'
+- path: 'CoreUtils\**\*.nupkg'
