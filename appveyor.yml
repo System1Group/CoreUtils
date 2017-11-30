@@ -21,5 +21,5 @@ test_script:
 - ps: dotnet test CoreUtils.Tests\System1Group.Lib.CoreUtils.Tests.csproj
 after_build:
 - ps: dotnet pack CoreUtils\System1Group.Lib.CoreUtils.csproj
-artifacts:
-- path: 'CoreUtils\**\*.nupkg'
+on_success:
+- ps: if ($env:APPVEYOR_REPO_TAG -eq "true") { Get-ChildItem -Path .\ -Include *.nupkg -Recurse | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name } } else { Write-Host "Skip uploading artefacts for non-tag build." }
