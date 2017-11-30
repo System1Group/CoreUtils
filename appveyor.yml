@@ -15,6 +15,8 @@ nuget:
   disable_publish_on_pr: true
 before_build:
 - cmd: dotnet restore
+init:
+- ps: if ($env:APPVEYOR_REPO_TAG -eq "true") { Update-AppveyorBuild -Version "$env:APPVEYOR_REPO_TAG_NAME" }
 build:
   verbosity: minimal
 test_script:
