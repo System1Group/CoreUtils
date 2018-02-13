@@ -39,5 +39,11 @@ namespace System1Group.Lib.CoreUtils
             Throw.IfWhitespace(value, paramName);
             return value;
         }
+
+        public static double OrThrowIfInfinityOrNaN(double value, string paramName)
+        {
+            Throw.IfInfinityOrNaN(value, paramName);
+            return value;
+        }
     }
 }
