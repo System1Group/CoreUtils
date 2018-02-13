@@ -63,6 +63,19 @@
             }
         }
 
+        public static void IfInfinityOrNaN(double value, string paramName)
+        {
+            if (double.IsNaN(value))
+            {
+                throw new ArgumentException("Value should not be NaN", paramName);
+            }
+
+            if (double.IsInfinity(value))
+            {
+                throw new ArgumentException("Value should not be infinity", paramName);
+            }
+        }
+
         private static void IfEmpty(string value, string paramName)
         {
             if (string.CompareOrdinal(value, string.Empty) == 0)

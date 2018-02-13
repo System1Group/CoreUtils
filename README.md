@@ -17,6 +17,7 @@ Throw.IfNullOrEmpty(str, nameof(str)); // Throws ArgumentException
 // Other variations are:
 // - Throw.IfNullEmptyOrWhitespace
 // - Throw.IfEmptyOrWhitespace
+// - Throw.IfInfinityOrNaN
 ```
 
 ### ReturnParameter
@@ -34,6 +35,7 @@ var str3 = ReturnParameter.OrThrowIfNull(str, nameof(str)); // Throws ArgumentNu
 //  - ReturnParameter.OrThrowIfNullEmptyOrWhitespace
 //  - ReturnParameter.OrThrowIfNullOrEmpty
 //  - ReturnParameter.OrThrowIfEmptyOrWhitespace
+//  - ReturnParameter.OrThrowIfInfinityOrNaN
 ```
 
 ## LazyValue
