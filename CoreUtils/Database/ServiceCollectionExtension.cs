@@ -4,7 +4,7 @@
 
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddSystem1EfRepositories(this IServiceCollection services)
+        public static IServiceCollection AddCoreUtilEfRepositories(this IServiceCollection services)
         {
             services.AddTransient(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddTransient(typeof(IViewRepository<>), typeof(EfViewRepository<>));
