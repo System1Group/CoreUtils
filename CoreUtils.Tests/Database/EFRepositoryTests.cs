@@ -11,23 +11,22 @@
     public class EFRepositoryTests
     {
         private FakeDbContext context;
-        private DbContextOptions<FakeDbContext> options;
         private IRepository<FakeTable> fakeTableRepository;
         private List<FakeTable> fakeTableData;
 
         [SetUp]
         public async Task SetUp()
         {
-            this.options = new DbContextOptionsBuilder<FakeDbContext>()
+            var options = new DbContextOptionsBuilder<FakeDbContext>()
                 .UseInMemoryDatabase(databaseName: nameof(EFRepositoryTests))
                 .Options;
 
-            this.context = new FakeDbContext(this.options);
+            this.context = new FakeDbContext(options);
 
             this.fakeTableRepository = new EfRepository<FakeTable>(this.context);
 
             this.fakeTableData = new List<FakeTable>();
-            this.fakeTableData.AddRange(new List<FakeTable>()
+            this.fakeTableData.AddRange(new List<FakeTable>
             {
                 new FakeTable
                 {
