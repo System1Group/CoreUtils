@@ -5,8 +5,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CSharpRuleSet" Version="2.0.9" Type="build">
+    <PackageReference Include="CSharpRuleSet" Version="2.0.37" Type="build">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
   </ItemGroup>
 </Project>
