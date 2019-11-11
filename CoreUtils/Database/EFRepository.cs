@@ -6,6 +6,7 @@
     using System.Linq.Expressions;
     using System.Threading.Tasks;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Storage;
 
     public class EfRepository<T> : IRepository<T>
         where T : class
@@ -64,6 +65,11 @@
         public void AddRange(IEnumerable<T> entities)
         {
             this.dbSet.AddRange(entities);
+        }
+
+        public async Task<IDbContextTransaction> BeginTransaction()
+        {
+            return await this.context.Database.BeginTransactionAsync();
         }
 
         public void Dispose()

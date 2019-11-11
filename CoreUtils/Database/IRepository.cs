@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Linq.Expressions;
     using System.Threading.Tasks;
+    using Microsoft.EntityFrameworkCore.Storage;
 
     public interface IRepository<T> : IDisposable
         where T : class
@@ -26,5 +27,7 @@
         void DeleteRange(IEnumerable<T> entities);
 
         void AddRange(IEnumerable<T> entities);
+
+        Task<IDbContextTransaction> BeginTransaction();
     }
 }
