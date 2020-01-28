@@ -1,4 +1,6 @@
-﻿namespace System1Group.Lib.CoreUtils.Database
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+
+namespace System1Group.Lib.CoreUtils.Database
 {
     using System;
     using System.Collections.Generic;
@@ -19,6 +21,10 @@
         void Update(T entity);
 
         void Delete(T entity);
+
+        EntityEntry<T> Attach(T entity);
+
+        EntityEntry<T> Entry(T entity);
 
         Task<int> SaveChangesAsync();
 

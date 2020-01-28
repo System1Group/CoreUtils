@@ -1,4 +1,6 @@
-﻿namespace System1Group.Lib.CoreUtils.Database
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+
+namespace System1Group.Lib.CoreUtils.Database
 {
     using System;
     using System.Collections.Generic;
@@ -45,6 +47,16 @@
         public void Update(T entity)
         {
             this.dbSet.Update(entity);
+        }
+
+        public EntityEntry<T> Attach(T entity)
+        {
+            return this.dbSet.Attach(entity);
+        }
+
+        public EntityEntry<T> Entry(T entity)
+        {
+            return this.context.Entry(entity);
         }
 
         public async Task<bool> Any(Expression<Func<T, bool>> predicate)
