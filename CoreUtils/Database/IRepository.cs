@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
-
-namespace System1Group.Lib.CoreUtils.Database
+﻿namespace System1Group.Lib.CoreUtils.Database
 {
     using System;
     using System.Collections.Generic;
@@ -8,6 +6,7 @@ namespace System1Group.Lib.CoreUtils.Database
     using System.Linq.Expressions;
     using System.Threading.Tasks;
     using Microsoft.EntityFrameworkCore.Storage;
+    using Microsoft.EntityFrameworkCore.ChangeTracking;
 
     public interface IRepository<T> : IDisposable
         where T : class
