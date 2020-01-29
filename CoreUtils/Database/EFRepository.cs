@@ -6,6 +6,7 @@
     using System.Linq.Expressions;
     using System.Threading.Tasks;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.ChangeTracking;
     using Microsoft.EntityFrameworkCore.Storage;
 
     public class EfRepository<T> : IRepository<T>
@@ -45,6 +46,16 @@
         public void Update(T entity)
         {
             this.dbSet.Update(entity);
+        }
+
+        public EntityEntry<T> Attach(T entity)
+        {
+            return this.dbSet.Attach(entity);
+        }
+
+        public EntityEntry<T> Entry(T entity)
+        {
+            return this.context.Entry(entity);
         }
 
         public async Task<bool> Any(Expression<Func<T, bool>> predicate)

@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Linq.Expressions;
     using System.Threading.Tasks;
+    using Microsoft.EntityFrameworkCore.ChangeTracking;
     using Microsoft.EntityFrameworkCore.Storage;
 
     public interface IRepository<T> : IDisposable
@@ -19,6 +20,10 @@
         void Update(T entity);
 
         void Delete(T entity);
+
+        EntityEntry<T> Attach(T entity);
+
+        EntityEntry<T> Entry(T entity);
 
         Task<int> SaveChangesAsync();
 
